@@ -30,7 +30,11 @@ public class Main {
     @PostMapping("/test")
     public Object test() {
         EventRequest eventRequest = new EventRequest("sthRequest", 0);
-        eventResponsibilityChain.start(eventRequest);
+        try {
+            eventResponsibilityChain.start(eventRequest);
+        } catch (RuntimeException e) {
+            // 通过某个处理器抛异常方式中断链职责
+        }
         return "ok";
     }
 }

@@ -16,6 +16,7 @@ public class EventHandlerImpl2 extends AbstractEventHandler {
         eventRequest.setName("EventHandlerImpl2");
         eventRequest.setAge(eventRequest.getAge() + 1);
         System.out.println(eventRequest);
+//        throw new RuntimeException("error");
         return true;
     }
 }

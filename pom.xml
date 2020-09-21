@@ -6,6 +6,9 @@
     <modules>
         <module>chain</module>
         <module>proxy</module>
+        <module>factory</module>
+        <module>mapstruct</module>
+        <module>builder</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

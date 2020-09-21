@@ -34,6 +34,7 @@ public class Main {
             eventResponsibilityChain.start(eventRequest);
         } catch (RuntimeException e) {
             // 通过某个处理器抛异常方式中断链职责
+            return "error";
         }
         return "ok";
     }

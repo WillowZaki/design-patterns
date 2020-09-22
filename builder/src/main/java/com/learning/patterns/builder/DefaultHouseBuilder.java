@@ -46,13 +46,13 @@ public class DefaultHouseBuilder implements HouseBuilder {
 
     @Override
     public void buildBody() {
-        house.setHead("body");
+        house.setBody("body");
         System.out.println("buildBody ready.");
     }
 
     @Override
     public void buildFoot() {
-        house.setHead("foot");
+        house.setFoot("foot");
         System.out.println("buildFoot ready.");
     }
 

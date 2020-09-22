@@ -9,6 +9,8 @@
         <module>factory</module>
         <module>mapstruct</module>
         <module>builder</module>
+        <module>listener</module>
+        <module>thread</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -24,6 +26,7 @@
 
     <properties>
         <java.version>1.8</java.version>
+        <commons.lang3.version>3.5</commons.lang3.version>
     </properties>
 
     <dependencies>
@@ -37,6 +40,20 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons.lang3.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>5.2.9.RELEASE</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

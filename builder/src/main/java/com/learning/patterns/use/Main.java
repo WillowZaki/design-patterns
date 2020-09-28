@@ -3,6 +3,7 @@ package com.learning.patterns.use;
 import com.learning.patterns.builder.DefaultHouseBuilder;
 import com.learning.patterns.builder.House;
 import com.learning.patterns.builder.HouseDirector;
+import com.learning.patterns.builder.Material;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +22,8 @@ public class Main {
     private DefaultHouseBuilder defaultHouseBuilder;
 
     @PostMapping("/test")
-    public Object test() throws ExecutionException, InterruptedException {
+    public Object test(Material material) throws ExecutionException, InterruptedException {
+        defaultHouseBuilder.init(material);
         House house = HouseDirector.create(defaultHouseBuilder);
         System.out.println(house);
         return "ok";

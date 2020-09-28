@@ -18,6 +18,19 @@ public final class HouseDirector {
      * CompletableFuture.runAsync()使用的线程池
      * private static final Executor asyncPool = useCommonPool ?
      * ForkJoinPool.commonPool() : new ThreadPerTaskExecutor();
+     *
+     *          CompletableFuture.supplyAsync(()->{
+     *             builder.buildHead();
+     *             return null;
+     *         });
+     *         CompletableFuture.supplyAsync(()->{
+     *             builder.buildBody();
+     *             return null;
+     *         });
+     *         CompletableFuture.supplyAsync(()->{
+     *             builder.buildFoot();
+     *             return null;
+     *         });
      */
     public static House create(HouseBuilder builder) throws ExecutionException, InterruptedException {
         List<CompletableFuture<Void>> tasks = new ArrayList<>();

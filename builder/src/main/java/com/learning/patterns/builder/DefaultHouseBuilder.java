@@ -30,11 +30,7 @@ public class DefaultHouseBuilder implements HouseBuilder {
 
     @Override
     public void buildBase() {
-        Material material = new Material();
-        material.setSomething("something");
-        init(material);
         house = new House();
-        house.setMaterial(material);
         System.out.println("buildBase ready.");
     }
 
